@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio Arquitetura</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body >
+    <nav class="naveg">
+        <ul class="menu">
+            <li>
+                <a href="#inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="#main">Projetos</a>
+            </li>
+            <li>
+                <a href="#">Contat</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="inicio">
+        <div  class="principal">
+            <div id="imagem-principal">
+            <img src="img/teste2.jpg" alt="imagemPessoa" id="imagem-principal"> 
+            </div>
+            <div class="info-principal">
+                <h1 id="nome-info-principal">Marissol</h1>
+                <p>Meu nome e Marissol e meu interesse pela arquitetura surgiu do
+desejo de criar espaços nos quais as pessoas se sintam seguras,
+acolhidas e verdadeiramente conectadas com o ambiente.
+Acredito que a arquitetura deve ir alem da estética, sendo capaz
+de organizar o espaco de forma funcional e confortavel para
+quem o utiliza. Minha proposta de marca pessoal está baseada no
+desenvolvimento de projetos que unem clareza técnica,
+organização e atenção aos detalhes construtivos, valorizando não
+apenas a ideia do projeto, mas tambem a forma como ela é
+estruturada e apresentada. Meu diferencial esta na preocupação
+em tornar os projetos compreensiveis e bem organizados,
+garantindo que as solucões propostas possam ser executadas
+com eficiência.
+
+Dessa forma, busco construir uma identidade profissional
+baseada em responsabilidade, precisão técnica e cuidado com a
+experiência das pessoas nos espaços projetados.</p>
+            </div>
+        </div>
+    </section>
+    <section id="main">
+        <div class="carrosel-css">
+             <button class="carrossel-btn prev" id="btn-prev">&#10094;</button>
+                <button class="carrossel-btn next" id="btn-next">&#10095;</button>        
+                    
+            <div class="slides">
+              
+                <div class="slide"> 
+                    <img src="img/teste.jpg" alt="">
+                    <div class="descricao">
+                      <h2>titulo1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui enim exercitationem at? Eum eos earum quos, consequatur, dolore repellendus cumque quaerat possimus, cupiditate iste hic autem necessitatibus. Amet, eius possimus.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/teste3.jpg" alt="">
+                    <div class="descricao">
+                        <h2>Titulo2</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cum officiis sequi odit, illum cupiditate, aliquid facere libero amet qui voluptates aperiam nihil. Ipsam ducimus eum, libero architecto officiis voluptatem?</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/teste2.jpg">
+                    <div class="descricao">
+                        <h2>Titulo3</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cum officiis sequi odit, illum cupiditate, aliquid facere libero amet qui voluptates aperiam nihil. Ipsam ducimus eum, libero architecto officiis voluptatem?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+  const slides = document.querySelector('.slides');
+  const slide = document.querySelectorAll('.slide');
+  const prevBtn = document.getElementById('btn-prev');
+  const nextBtn = document.getElementById('btn-next');
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    if(index < 0) {
+      currentIndex = slide.length - 1;
+    } else if(index >= slide.length) {
+      currentIndex = 0;
+    } else {
+      currentIndex = index;
+    }
+    slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    showSlide(currentIndex - 1);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    showSlide(currentIndex + 1);
+  });
+</script>
+</html>
