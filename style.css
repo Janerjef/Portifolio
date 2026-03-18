@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -22,15 +23,16 @@ section {
 .naveg{ 
     position: sticky;
     top: 0;
-    background-color: var(--vidro);
+    
     padding: 0 80px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    display: flex;
     height: 70px;
     z-index: 100;
 }
 body {
-    background-image: url("img/imgdefundo.svg");
+    
     background-size: cover; /* cobre toda a tela */
     background-repeat: no-repeat;
     background-position: center;
@@ -43,37 +45,76 @@ html, body{
 }
 
 .menu{
-    padding-top: 20px;
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 10px;
+    background-color: rgba(255,255,255,0.08);
+    padding: 8px 12px;
+    border-radius: 30px;
+
+    border: 2px solid transparent;
 }
 .menu a{
     text-decoration: none;
     color: var(--secundaria);
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.butao{
+      opacity: 0.7;
+  transition: 0.3s;
+}
+.butao:hover{
+      opacity: 1;
+}
+#nome-inicio {
+    font-size: 400px;
+    margin-left: 225px;
+    font-family: 'Parisienne', cursive;
+    color: var(--secundaria);
+    
 }
 .principal{
     display: flex;
+    
 }
-#imagem-principal{
+.imagem-principal{
     margin-left: 30px;
     border-radius: 20px;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
-    margin-top: 50px;
-    margin-left: 145px;/*centralize por aqui*/
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.25);
+    margin-top: 200px;
+    margin-left: 340px;/*centralize por aqui*/
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+}
+.imagem-principal:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 40xpx rgba(0,0,0,0.3);
 }
 .info-principal {
     color: var(--secundaria);
     margin: 50px;
     max-width: 700px;
     text-align: justify;
-    margin-left: 150px;/*centralize por aqui*/
+    margin-left: 100px;/*centralize por aqui*/
     margin-top: 200px;
     
 }
 #nome-info-principal{
-    font-family: 'Playfair Display', serif;
+font-family: 'Parisienne', cursive;
+font-weight: 400; /* mais leve */
+font-size: 70px;
+transition: box-shadow 0.3s ease;
+}
+
+#nome-info-principal :hover {
+    box-shadow: 0 15px 40xpx rgba(0,0,0,0.3);
+}
+#main{
+    margin-top: 400px;
 }
 
 .carrosel-css{
@@ -83,6 +124,12 @@ html, body{
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+}
+.carrosel-css:hover{
+    transform: scale(1.01);
+    box-shadow: 0 15px 40xpx rgba(0,0,0,0.3);
 }
 
 .slides{
@@ -124,4 +171,13 @@ html, body{
 
 .next {
   right: 10px;
+}
+.bg-svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
