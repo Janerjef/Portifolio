@@ -70,12 +70,21 @@ html, body{
 .butao:hover{
       opacity: 1;
 }
+#Inicio{
+    scroll-margin-top: 250px;
+}
 #nome-inicio {
     font-size: 400px;
-    margin-left: 225px;
+    margin-top: 150px;
+    margin-left: 215px;
     font-family: 'Parisienne', cursive;
     color: var(--secundaria);
     
+}
+#legend-inicio{
+    margin-top: 0px;
+    margin-left: 770px;
+    color: var(--secundaria);
 }
 .principal{
     display: flex;
@@ -120,7 +129,9 @@ transition: box-shadow 0.3s ease;
 .carrosel-css{
     position: relative;
     width: 700px;
-    margin: auto;
+    margin-top: 0px;
+    margin-left: 590px;
+    margin-bottom: 180px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
