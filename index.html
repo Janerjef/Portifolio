@@ -23,7 +23,7 @@
                 <a href="#main" class="butao">Projetos</a>
             </li>
             <li>
-                <a href="#" class="butao">Destaque</a>
+                <a href="#Destaque" class="butao">Destaque</a>
             </li>
             <li>
                 <a href="#" class="butao">Contat</a>
@@ -64,8 +64,8 @@ experiência das pessoas nos espaços projetados.</p>
     </section>
     <section id="main">
         <div class="carrosel-css">
-             <button class="carrossel-btn prev" id="btn-prev">&#10094;</button>
-                <button class="carrossel-btn next" id="btn-next">&#10095;</button>        
+             <button class="carrossel-btn prev">&#10094;</button>
+                <button class="carrossel-btn next" >&#10095;</button>        
                     
             <div class="slides">
               
@@ -93,28 +93,54 @@ experiência das pessoas nos espaços projetados.</p>
             </div>
         </div>
     </section>
-    <section>
-        <h2>Projeto Destaque</h2>
-        <p>andamento</p>
-
+    <section id="Destaque">
+        <h2 id="titulo-destaque">Projeto Destaque</h2>
+        <p id="descricao-destaque">andamento</p>
+                <div class="carrosel-css2">
+             <button class="carrossel-btn prev" >&#10094;</button>
+                <button class="carrossel-btn next" >&#10095;</button>        
+                    
+            <div class="slides">
+              
+                <div class="slide"> 
+                    <img src="img/1.jpeg" alt="">
+                    <div class="descricao">
+                    
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/img_carrosel/2.png">
+                    <div class="descricao">
+                        
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="">
+                    <div class="descricao">
+                       
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 <script>
-  const slides = document.querySelector('.slides');
-  const slide = document.querySelectorAll('.slide');
-  const prevBtn = document.getElementById('btn-prev');
-  const nextBtn = document.getElementById('btn-next');
+document.querySelectorAll('.carrosel-css, .carrosel-css2').forEach(carrosel => {
+  const slides = carrosel.querySelector('.slides');
+  const slide = carrosel.querySelectorAll('.slide');
+  const prevBtn = carrosel.querySelector('.prev');
+  const nextBtn = carrosel.querySelector('.next');
 
   let currentIndex = 0;
 
   function showSlide(index) {
-    if(index < 0) {
+    if (index < 0) {
       currentIndex = slide.length - 1;
-    } else if(index >= slide.length) {
+    } else if (index >= slide.length) {
       currentIndex = 0;
     } else {
       currentIndex = index;
     }
+
     slides.style.transform = `translateX(${-currentIndex * 100}%)`;
   }
 
@@ -125,5 +151,6 @@ experiência das pessoas nos espaços projetados.</p>
   nextBtn.addEventListener('click', () => {
     showSlide(currentIndex + 1);
   });
+});
 </script>
 </html>

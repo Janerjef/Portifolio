@@ -36,6 +36,7 @@ body {
     background-size: cover; /* cobre toda a tela */
     background-repeat: no-repeat;
     background-position: center;
+    overflow-x: hidden;
 
 }
 
@@ -64,7 +65,7 @@ html, body{
 }
 
 .butao{
-      opacity: 0.7;
+opacity: 0.7;
   transition: 0.3s;
 }
 .butao:hover{
@@ -79,6 +80,12 @@ html, body{
     margin-left: 215px;
     font-family: 'Parisienne', cursive;
     color: var(--secundaria);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    
+}
+#nome-inicio:hover {
+    transform: scale(1.01);
     
 }
 #legend-inicio{
@@ -101,7 +108,7 @@ html, body{
 }
 .imagem-principal:hover {
     transform: scale(1.01);
-    box-shadow: 0 15px 40xpx rgba(0,0,0,0.3);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 .info-principal {
     color: var(--secundaria);
@@ -124,13 +131,14 @@ transition: box-shadow 0.3s ease;
 }
 #main{
     margin-top: 400px;
+    margin-bottom: 400px;
 }
 
 .carrosel-css{
     position: relative;
-    width: 700px;
+    width: 900px;
     margin-top: 0px;
-    margin-left: 590px;
+    margin-left: 495px;
     margin-bottom: 180px;
     overflow: hidden;
     border-radius: 10px;
@@ -140,7 +148,7 @@ transition: box-shadow 0.3s ease;
 }
 .carrosel-css:hover{
     transform: scale(1.01);
-    box-shadow: 0 15px 40xpx rgba(0,0,0,0.3);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
 .slides{
@@ -191,4 +199,38 @@ transition: box-shadow 0.3s ease;
     height: 100%;
     object-fit: cover;
     z-index: -1;
+}
+.destaque{
+    display: flex;
+}
+.carrosel-css2{
+    position: relative;
+    width: 400px;
+    margin-left: 250px;
+    margin-bottom: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+}
+.carrosel-css2:hover{
+    transform: scale(1.01);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+#titulo-destaque{
+    text-align: center;
+    margin-left: 40px;
+    color: var(--secundaria);
+    font-size: 50px;
+    font-family: 'Parisienne', cursive;
+    font-weight: 400; /* mais leve */
+}
+#descricao-destaque{
+    text-align: center;
+    margin-left: 40px;
+    color: var(--secundaria);
+    font-size: 50px;
+    font-family: 'Parisienne', cursive;
+    font-weight: 400; /* mais leve */
 }
