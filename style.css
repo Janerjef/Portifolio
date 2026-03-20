@@ -18,7 +18,11 @@ html {
     --vidro: rgba(255, 255, 255, 0.1);
 }
 section {
-    padding: 80px 20px;
+    min-height: 100vh;
+    padding: 40px 20px; /* diminui o padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .naveg{ 
     position: sticky;
@@ -66,24 +70,27 @@ html, body{
 }
 
 .butao{
- opacity: 0.7;
-  transition: 0.3s;
+    opacity: 0.7;
+    transition: 0.3s;
 }
 .butao:hover{
       opacity: 1;
 }
-#Inicio{
-    scroll-margin-top: 250px;
+#Inicio{  
+      min-height: 100vh;
+      padding-top: 0;
+    
 }
 #nome-inicio {
-    font-size: clamp(40px,15vw,200px);/*MIN IDEAL MAX*/
-    margin: 10px auto;
+    font-size: clamp(30px,15vw,200px);/*MIN IDEAL MAX*/
+    margin: 0px auto;
     text-align: center;
+    align-items: center;
     font-family: 'Parisienne', cursive;
     color: var(--secundaria);
     transition: box-shadow 0.3s ease;
     transition: transform 0.3s ease;
-    
+ 
 }
 #nome-inicio:hover {
     transform: scale(1.01);
@@ -133,21 +140,24 @@ transition: box-shadow 0.3s ease;
     box-shadow: 0 15px 40xpx rgba(0,0,0,0.3);
 }
 #main{
-    margin: 0 auto;
+    
     display: block;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .carrosel-css{
     
-    position: relative;
-    width: 600px;
+   position: relative;
+    width: 90%;
+    max-width: 70vh;
     margin: 0 auto;
     display: block;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: box-shadow 0.3s ease;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .carrosel-css:hover{
     transform: scale(1.01);
@@ -246,4 +256,37 @@ transition: box-shadow 0.3s ease;
     margin: 50px;
     max-width: 700px;
     text-align: justify;
+}
+@media (max-width: 768px) {
+
+    section {
+        padding: 40px 10px;
+    }
+
+    .principal {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    #texto-destaque {
+        margin: 20px;
+    }
+
+    .carrosel-css,
+    .carrosel-css2 {
+        width: 100%;
+    }
+
+    .menu {
+        gap: 5px;
+        padding: 6px;
+    }
+
+    #descricao-destaque {
+        font-size: 20px;
+    }
+
+    #titulo-destaque {
+        font-size: 28px;
+    }
 }
